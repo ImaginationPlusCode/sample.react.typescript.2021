@@ -1,2 +1,5 @@
 web.config
 tsconfig.json
+node_modules/
+coverage/
+dist/

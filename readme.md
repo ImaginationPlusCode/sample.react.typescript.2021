@@ -22,6 +22,11 @@ Used to enforce code style preferences for the project.
 2. enable format on save option in your editor
 3. set default formatter to selected dependencys
 
-# Webpack
+## Webpack
 
 Used to manage dependencies, module loading, and build distributable
+
+## Jest + React Testing Library
+
+Used for running tests.
+npm run test to execute tests and view coverage
