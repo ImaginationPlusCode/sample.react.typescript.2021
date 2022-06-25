@@ -6,7 +6,7 @@
     "scripts": {
         "start": "webpack serve --mode=development --open",
         "build": "npm run test && webpack --mode=production",
-        "lint": "npm run style && eslint src",
+        "lint": "npm run style && eslint src --ext .js,.json,.ts,.tsx",
         "lint:fix": "npm run lint -- --fix",
         "style": "prettier --write .",
         "test": "npm run lint "
