@@ -26,6 +26,11 @@ module.exports = {
                 use: 'ts-loader',
                 exclude: /node_modules/,
             },
+            {
+                test: /\.(config)$/,
+                loader: 'file-loader',
+                options: { name: '[name].[ext]' },
+            },
         ],
     },
 
