@@ -8,6 +8,5 @@ describe('<App />', () => {
         render(<App />);
         const el = screen.getByText(/react/i);
         expect(el).toBeInTheDocument();
-        screen.debug();
     });
 });
