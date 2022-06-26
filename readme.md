@@ -4,6 +4,11 @@
 
 This project uses react https://reactjs.org/ to build reuasable components and manage app state.
 
+## i18next
+
+This project uses i18next https://react.i18next.com/ for internationalization of static language
+like labels, headers, and tranlations of dates and times.
+
 # Dev Dependencies
 
 ## Typescript
@@ -19,8 +24,8 @@ Used to lint the application.
 Used to enforce code style preferences for the project.
 
 1. install prettier extension for your code editor
-2. enable format on save option in your editor
-3. set default formatter to selected dependencys
+2. enable formatOnSave option in your editor
+3. set defaultFormatter to prettier extension
 
 ## Webpack
 

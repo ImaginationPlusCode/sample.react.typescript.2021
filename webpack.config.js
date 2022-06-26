@@ -1,14 +1,16 @@
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+const CopyWebPackPlugin = require('copy-webpack-plugin');
 
 // Instantiate the plugin.
 // The `template` property defines the source
 // of a template file that this plugin will use.
 // We will create it later.
-const htmlPlugin = new HtmlWebPackPlugin({
-    template: './src/index.html',
-});
+const htmlPlugin = new HtmlWebPackPlugin();
 
+const copyPlugin = new CopyWebPackPlugin({
+    patterns: [{ from: 'public/locales', to: 'locales' }],
+});
 module.exports = {
     // Our application entry point.
     entry: './src/index.tsx',
@@ -48,5 +50,5 @@ module.exports = {
     },
 
     // Use the html plugin.
-    plugins: [htmlPlugin],
+    plugins: [htmlPlugin, copyPlugin],
 };
