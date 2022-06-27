@@ -4,20 +4,13 @@ import '@testing-library/jest-dom';
 import App from './app';
 
 jest.mock('react-i18next', () => ({
-    useTranslation: () => (Component: React.FC) => {
-        Component.defaultProps = {
-            ...Component.defaultProps,
-            t: (key: any) => key,
-        };
-        return Component;
-    },
+    useTranslation: () => ({ t: (key: string) => key }),
 }));
 
 describe('<App />', () => {
-    it('renders header', () => {
+    it('renders header', async () => {
         render(<App />);
-        const el = screen.getByText(/hello react/i);
+        const el = screen.getByText(/header/i);
         expect(el).toBeInTheDocument();
-        screen.debug();
     });
 });

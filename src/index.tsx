@@ -1,8 +1,6 @@
 import React from 'react';
 import App from './components/app';
 import { createRoot } from 'react-dom/client';
-import './i18n';
-import './web.config';
 import i18n from './i18n';
 import { I18nextProvider } from 'react-i18next';
 
